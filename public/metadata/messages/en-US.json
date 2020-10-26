@@ -1,0 +1,14 @@
+{
+  "name": "Recipe2Basket",
+  "headline": "Connect your e-commerce to content publishers and brands trough digital shopping experiences.",
+  "overview": "Recipe2Basket is a platform that connects content publishers, brands and retailers with shoppable content experiences for the mobile web. \nThe information collected is related to product data feed such as available products, categories, GTIN, product IDs and price and will be shared as long as the app is installed.",
+  "features": [
+    "Private product API",
+    "Product feed data sharing",
+    "Plug-and-play integration to Recipe2Basket"
+  ],
+  "websiteURL": "https://recipe2basket.com/",
+  "support": {
+    "url": "https://recipe2basket.com/#cta"
+  }
+}

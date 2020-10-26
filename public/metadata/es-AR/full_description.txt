@@ -1,0 +1,9 @@
+## Sobre
+
+Esta aplicación ofrece una forma práctica para los e-commerces que utilisam la plataforma VTEX se conecten a Recipe2Basket.
+
+
+## Como configurar
+
+1. Instale la aplicaciรณn Integraciรณn Recipe2Basket desde VTEX App Store;
+2. Agregue su clave de API adquirida durante el proceso de integraciรณn Recipe2Basket.

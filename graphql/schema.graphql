@@ -1,0 +1,234 @@
+type Query {
+  """
+  Returns a specified product
+  """
+  product(
+    """
+    Product slug
+    """
+    slug: String
+    """
+    Product identifier
+    """
+    identifier: ProductUniqueIdentifier
+  ): Product
+    @cacheControl(scope: SEGMENT, maxAge: SHORT)
+    @withSegment
+    @deprecated(reason: "Use the query defined in the search-graphql app")
+
+  """
+  Returns products list filtered and ordered
+  """
+  productSearch(
+    """
+    Terms that is used in search e.g.: eletronics/samsung
+    """
+    query: String = ""
+    """
+    Defines terms types: Brand, Category, Department e.g.: c,b
+    """
+    map: String = ""
+    """
+    Filter by category. {a}/{b} - {a} and {b} are categoryIds
+    """
+    category: String = ""
+    """
+    Array of product specification. specificationFilter_{a}:{b} - {a} is the specificationId, {b} = specification value
+    """
+    specificationFilters: [String]
+    """
+    Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
+    """
+    priceRange: String = ""
+    """
+    Filter by collection. where collection also know as productClusterId
+    """
+    collection: String = ""
+    """
+    Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
+    """
+    salesChannel: String = ""
+    """
+    Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC
+    """
+    orderBy: String = "OrderByPriceDESC"
+    """
+    Pagination item start
+    """
+    from: Int = 0
+    """
+    Pagination item end
+    """
+    to: Int = 9
+    """
+    If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg
+    """
+    hideUnavailableItems: Boolean = false
+  ): ProductSearch
+    @cacheControl(scope: SEGMENT, maxAge: SHORT)
+    @withSegment
+    @deprecated(reason: "Use the query defined in the search-graphql app")
+
+  """
+  Returns products list filtered and ordered
+  """
+  products(
+    """
+    Terms that is used in search e.g.: eletronics/samsung
+    """
+    query: String = ""
+    """
+    Defines terms types: Brand, Category, Department e.g.: c,b
+    """
+    map: String = ""
+    """
+    Filter by category. {a}/{b} - {a} and {b} are categoryIds
+    """
+    category: String = ""
+    """
+    Array of product specification. specificationFilter_{a}:{b} - {a} is the specificationId, {b} = specification value
+    """
+    specificationFilters: [String]
+    """
+    Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
+    """
+    priceRange: String = ""
+    """
+    Filter by collection. where collection also know as productClusterId
+    """
+    collection: String = ""
+    """
+    Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
+    """
+    salesChannel: String = ""
+    """
+    Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC
+    """
+    orderBy: String = "OrderByPriceDESC"
+    """
+    Pagination item start
+    """
+    from: Int = 0
+    """
+    Pagination item end
+    """
+    to: Int = 9
+    """
+    If true, uses isAvailablePerSalesChannel_ parameter on query with segment's sales channel. Will override any given salesChannel arg
+    """
+    hideUnavailableItems: Boolean = false
+  ): [Product]
+    @cacheControl(scope: SEGMENT, maxAge: SHORT)
+    @withSegment
+    @deprecated(reason: "Use the query defined in the search-graphql app")
+
+  """
+  Search for products. e.g.: search(query: 'eletronics', rest: 'lg', map: 'c,b')
+  """
+  search(
+    """
+    Terms that is used in search e.g.: eletronics/samsung
+    """
+    query: String = ""
+    """
+    Defines terms types: Brand, Category, Department e.g.: c,b
+    """
+    map: String = ""
+    """
+    Rest terms that is used in search e.g.: samsung,Android7
+    """
+    rest: String = ""
+    """
+    Filter by category. {a}/{b} - {a} and {b} are categoryIds
+    """
+    category: String = ""
+    """
+    Array of product specification. specificationFilter_{a}:{b} - {a} is the specificationId, {b} = specification value
+    """
+    specificationFilters: [String]
+    """
+    Filter by price range. e.g.: {a} TO {b} - {a} is the minimum price "from" and {b} is the highest price "to"
+    """
+    priceRange: String = ""
+    """
+    Filter by collection. where collection also know as productClusterId
+    """
+    collection: String = ""
+    """
+    Filter by availability at a specific sales channel. e.g.: salesChannel:4 if want filter by available products for the sales channel 4
+    """
+    salesChannel: String = ""
+    """
+    Order by a criteria. OrderByPriceDESC/OrderByPriceASC, OrderByTopSaleDESC, OrderByReviewRateDESC, OrderByNameASC/OrderByNameDESC, OrderByReleaseDateDESC, OrderByBestDiscountDESC
+    """
+    orderBy: String = "OrderByPriceDESC"
+    """
+    Pagination item start
+    """
+    from: Int = 0
+    """
+    Pagination item end
+    """
+    to: Int = 9
+  ): Search
+    @cacheControl(scope: SEGMENT, maxAge: SHORT)
+    @withSegment
+    @deprecated(reason: "Use the 'products' and 'facets' queries separately")
+
+  """
+  Returns a specified category
+  """
+  category(
+    """
+    Category id
+    """
+    id: Int
+  ): Category @cacheControl(scope: SEGMENT, maxAge: MEDIUM)
+
+  """
+  Returns categories tree
+  """
+  categories(
+    """
+    Category tree level. Default: 3
+    """
+    treeLevel: Int = 3
+  ): [Category] @cacheControl(scope: SEGMENT, maxAge: MEDIUM)
+
+  """
+  Returns a specified brand
+  """
+  brand(
+    """
+    Brand id
+    """
+    id: Int
+  ): Brand @cacheControl(scope: PUBLIC, maxAge: MEDIUM)
+
+  """
+  Returns brands list
+  """
+  brands: [Brand] @cacheControl(scope: PUBLIC, maxAge: MEDIUM)
+
+  """
+  Get the IDs for the provided search context slugs
+  """
+  searchContextFromParams(
+    brand: String
+    department: String
+    category: String
+    subcategory: String
+  ): SearchContext @deprecated(reason: "Use the 'pageType' query")
+
+}
+
+type Mutation {
+  """
+  Document
+  """
+  createDocumentV2(
+    dataEntity: String!
+    document: DocumentInputV2
+    schema: String
+  ): DocumentResponseV2 @cacheControl(scope: PRIVATE)
+}

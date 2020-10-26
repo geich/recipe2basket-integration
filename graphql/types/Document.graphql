@@ -1,0 +1,79 @@
+scalar JSONSchema
+scalar DocumentV2
+
+type Document {
+  """
+  id is used as cacheId
+  """
+  cacheId: ID
+  id: String
+  fields: [Field]
+}
+
+type Field {
+  key: String
+  value: String
+}
+
+type DocumentResponse {
+  """
+  documentId is used as cacheId
+  """
+  cacheId: ID
+  id: String
+  href: String
+  documentId: String
+}
+
+type DocumentResponseV2 {
+  """
+  documentId is used as cacheId
+  """
+  cacheId: ID
+  id: String
+  href: String
+  documentId: String
+}
+
+type AttachmentResponse {
+  filename: String
+  mimetype: String
+}
+
+input FieldInput {
+  key: String
+  value: String
+}
+
+input DocumentInput {
+  fields: [FieldInput]
+}
+
+input DocumentInputV2 {
+  document: DocumentV2
+}
+
+type DocProperty {
+  name: String
+  type: String
+  optional: Boolean
+}
+
+type VSecurity {
+  allowGetAll: Boolean
+  publicRead: [String]
+  publicWrite: [String]
+  publicFilter: [String]
+}
+
+type DocumentSchema {
+  name: String
+  properties: [DocProperty]
+  indexed: [String]
+  security: VSecurity
+  cache: Boolean
+}
+
+type DocumentSchemaV2 {
+  schema: JSONSchema
+}

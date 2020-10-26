@@ -1,0 +1,11 @@
+## Sobre
+
+Este aplicativo oferece uma maneira prática para e-commerces que usam a plataforma VTEX integrarem suas lojas ao Recipe2Basket.
+
+Recipe2Basket é uma plataforma que conecta publishers de conteúdo, marcas e varejistas através de experiências de compra digitais.
+
+
+## Como configurar
+
+1. Instale o aplicativo Integração Recipe2Basket da VTEX App Store;
+2. Adicione sua Chave de API adiquirida no processo de integração junto ao Recipe2Basket;

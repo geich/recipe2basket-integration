@@ -1,0 +1,12 @@
+## About
+
+This app offers an easy plug-and-play integration for e-commerces on the VTEX platform to Recipe2Basket.
+
+Recipe2Basket is a platform that connects content publishers, brands and retailers with shoppable content experiences for the mobile web.
+
+
+## How to set-up
+
+1. Install the Recipe2Basket Integration app on the VTEX App Store;
+2. Add your API Key acquired during the integration process with Recipe2Basket;
+

@@ -1,0 +1,14 @@
+{
+  "name": "Recipe2Basket",
+  "headline": "Conecte seu e-commerce com publishers de conteúdo e marcas através de experiências de compra digitais.",
+  "overview": "Este aplicativo permite a integração com o serviço Recipe2Basket.\nAs informações coletadas estão relacionadas ao feed de produtos disponíveis no e-commerce, como produtos em estoque, categoria, GTIN, ID do produto, preço, etc. e serão compartilhadas de forma contínua enquanto o app permanecer instalado.",
+  "features": [
+    "API de produtos privada",
+    "Compartilhamento de feed de dados",
+    "Integração plug-and-play com o Recipe2Basket"
+  ],
+  "websiteURL": "https://recipe2basket.com/",
+  "support": {
+    "url": "https://recipe2basket.com/#cta"
+  }
+}

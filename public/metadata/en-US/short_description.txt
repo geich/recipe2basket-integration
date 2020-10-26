@@ -1,0 +1,1 @@
+This app offers an easy plug-and-play integration for e-commerces on the VTEX platform to Recipe2Basket.

@@ -1,0 +1,54 @@
+12:10:04.604 - [32minfo[39m: Connecting to logs stream for zaply  
+12:10:04.607 - [32minfo[39m: Press CTRL+C to abort  
+12:10:22.915 - [32minfo[39m: Listening to zaply's logs  
+12:10:22.923 - [32minfo[39m: {
+  message: [32m'Master process 16 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:22.948 - [32minfo[39m: {
+  message: [32m'Master process 17 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:22.951 - [32minfo[39m: { message: [32m'Worker 25 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:22.965 - [32minfo[39m: { message: [32m'Worker 32 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:22.979 - [32minfo[39m: {
+  message: [32m'Master process 15 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:23.059 - [32minfo[39m: {
+  message: [32m'Master process 64 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:23.060 - [32minfo[39m: { message: [32m'Worker 72 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.064 - [32minfo[39m: {
+  message: [32m'Master process 16 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:23.090 - [32minfo[39m: { message: [32m'Worker 25 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.092 - [32minfo[39m: { message: [32m'Worker 27 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.092 - [32minfo[39m: { message: [32m'Worker 24 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.093 - [32minfo[39m: { message: [32m'Worker 31 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.093 - [32minfo[39m: { message: [32m'Worker 25 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.104 - [32minfo[39m: {
+  message: [32m'Master process 16 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:23.119 - [32minfo[39m: { message: [32m'Worker 26 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.136 - [32minfo[39m: { message: [32m'Worker 33 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.152 - [32minfo[39m: { message: [32m'Worker 32 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.170 - [32minfo[39m: { message: [32m'Worker 29 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.203 - [32minfo[39m: { message: [32m'Worker 32 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.204 - [32minfo[39m: { message: [32m'Worker 27 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.211 - [32minfo[39m: { message: [32m'Worker 23 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.226 - [32minfo[39m: { message: [32m'Worker 24 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.241 - [32minfo[39m: {
+  message: [32m'Master process 17 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  
+12:10:23.256 - [32minfo[39m: { message: [32m'Worker 31 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.272 - [32minfo[39m: { message: [32m'Worker 25 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.286 - [32minfo[39m: { message: [32m'Worker 32 received signal SIGTERM'[39m, signal: [32m'SIGTERM'[39m }  
+12:10:23.299 - [32minfo[39m: {
+  message: [32m'Master process 18 received signal SIGTERM'[39m,
+  signal: [32m'SIGTERM'[39m
+}  

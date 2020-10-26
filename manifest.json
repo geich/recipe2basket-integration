@@ -1,0 +1,54 @@
+{
+  "vendor": "zaply",
+  "name": "recipe2basket-integration",
+  "version": "0.0.7",
+  "title": "Recipe2Basket Integration",
+  "description": "This app offers an easy plug-and-play integration for e-commerces on the VTEX platform to Recipe2Basket.",
+  "defaultLocale": "pt-BR",
+  "builders": {
+    "graphql": "1.x",
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "mustUpdateAt": "2020-10-09",
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://recipe2basket.com/#cta",
+      "email": "gabrieleich@zaply.com.br"
+    },
+    "free": true,
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "dependencies": {
+    "vtex.rewriter": "1.x",
+    "vtex.catalog-api-proxy": "0.x"
+  },
+  "settingsSchema": {
+    "title": "Recipe2Basket Integration",
+    "type": "object",
+    "properties": {
+      "r2bApiKey": {
+        "title": "Recipe2Basket api key",
+        "description": "Enter the api key from your Recipe2Basket account",
+        "type": "string"
+      }
+    }
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh",
+    "postreleasy": "vtex publish --verbose"
+  },
+  "policies": [
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "vtex.catalog-api-proxy:authenticated-catalog-proxy"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
