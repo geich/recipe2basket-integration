@@ -21,12 +21,19 @@ declare global {
     cookie: string
     originalPath: string
     settings: string
-    vtex: CustomIOContext
+    vtex: CustomIOContext,
+    IOContext: IOContext
   }
 
   interface CustomIOContext extends IOContext {
     segment?: SegmentData
     orderFormId?: string
+    currentProfile: CurrentProfile
+  }
+
+  interface CurrentProfile {
+    email: string
+    userId: string
   }
 
   interface Item {
