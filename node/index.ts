@@ -32,7 +32,7 @@ export default new Service({
   },
   routes: {
     products: method({
-      POST: [products],
+      GET: [products],
     }),
   },
 })
