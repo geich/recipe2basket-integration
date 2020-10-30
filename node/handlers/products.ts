@@ -1,38 +1,26 @@
-import { json } from 'co-body'
-
 export async function products(ctx: Context, next: () => Promise<any>) {
-  // const {
-  //   clients: { catalog, appSettings }, query, headers: { api_token }
-  // } = ctx
   const {
-    clients: { testPvt, appSettings }, headers: { api_token }
+    clients: { catalog, appSettings }, query, headers: { api_token }
   } = ctx
   const { r2bApiKey } = await appSettings.getSettings()
   
   if(!r2bApiKey) {
     ctx.body = "Please configure Recipe2Basket in the apps admin."
     ctx.res.statusCode = 400
-  } else if(api_token === r2bApiKey) {
-    const body = await json(ctx.req)
-    // ctx.body = await testPvt.getProductAndSkuIds({
-    //   categoryId: body.category || null,
-    //   from: body.from || null,
-    //   to: body.to || null
-    // })
-    ctx.body = await testPvt.getProduct(body.productId)
-    // ctx.body = await catalog.products({ 
-    //   query: body.query || null,
-    //   category:  body.category || null,
-    //   specificationFilters: body.specificationFilters || null,
-    //   priceRange:  body.priceRange || null,
-    //   collection:  body.collection || null,
-    //   salesChannel:  body.salesChannel || null,
-    //   orderBy:  body.orderBy || null,
-    //   from: body.from || null,
-    //   to: body.to || null,
-    //   map:  body.map || null,
-    //   hideUnavailableItems: body.hideUnavailableItems || false  
-    // })
+  } else if(api_token === r2bApiKey ) {
+    ctx.body = await catalog.products({ 
+      query: query.query || null,
+      category:  query.category || null,
+      specificationFilters: query.specificationFilters || null,
+      priceRange:  query.priceRange || null,
+      collection:  query.collection || null,
+      salesChannel:  query.salesChannel || null,
+      orderBy:  query.orderBy || null,
+      from: query.from || null,
+      to: query.to || null,
+      map:  query.map || null,
+      hideUnavailableItems: query.hideUnavailableItems || false  
+    })
   } else {
     ctx.body = "Unauthorized"
     ctx.res.statusCode = 401

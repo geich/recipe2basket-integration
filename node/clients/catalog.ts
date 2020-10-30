@@ -50,7 +50,7 @@ export class Catalog extends AppClient {
   private basePath: string
   public constructor(ctx: IOContext, opts?: InstanceOptions) {
     super('vtex.catalog-api-proxy@0.x', ctx, opts)
-    this.basePath = '/proxy/authenticated/catalog'
+    this.basePath = ctx.sessionToken ? '/proxy/authenticated/catalog' : '/proxy/catalog'
   }
 
   public pageType = (path: string, query: string = '') => {
@@ -152,11 +152,6 @@ export class Catalog extends AppClient {
       metric: 'catalog-categories',
     })
 
-    public getProductAndSkuIds = (category: number) =>
-    this.get<Product[]>(`/pvt/products/GetProductAndSkuIds/?categoryId=${category}`, {
-      metric: 'catalog-getProductAndSkuIds',
-    })
-
   public facets = (facets: string = '') => {
     const [path, options] = decodeURI(facets).split('?')
     return this.get(
@@ -189,7 +184,7 @@ export class Catalog extends AppClient {
     // const segmentData: SegmentData | undefined = (this
     //   .context! as CustomIOContext).segment
     // const { channel: salesChannel = '' } = segmentData || {}
- 
+
     config.params = {
       ...config.params,
       // ...(!!salesChannel && { sc: salesChannel }),
