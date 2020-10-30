@@ -593,3 +593,4 @@ export const queries = {
     return getSearchMetaData(_, translatedArgs, ctx)
   },
 }
+
