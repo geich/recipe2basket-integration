@@ -1,7 +1,7 @@
 {
   "vendor": "zaply",
   "name": "recipe2basket-integration",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Recipe2Basket Integration",
   "description": "This app offers an easy plug-and-play integration for e-commerces on the VTEX platform to Recipe2Basket.",
   "defaultLocale": "pt-BR",
