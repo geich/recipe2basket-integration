@@ -7,11 +7,11 @@
   "maxReplicas": 100,
   "routes": {
     "products": {
-      "path": "/recipe2basket-integration/products",
+      "path": "/_v/recipe2basket-integration/products",
       "public": true
     },
     "categories": {
-      "path": "/recipe2basket-integration/categories",
+      "path": "/_v/recipe2basket-integration/categories",
       "public": true
     }
   }
