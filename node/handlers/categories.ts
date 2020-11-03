@@ -14,8 +14,7 @@ export async function categories(ctx: Context, next: () => Promise<any>) {
     const body = await json(ctx.req)
     const treeLevel = body.treeLevel || 0
     const categories = await catalog.categories(treeLevel)
-    // ctx.body = mapCategories(categories, treeLevel)
-    ctx.body = "In working..."
+    ctx.body = mapCategories(categories, treeLevel)
   } else {
     ctx.body = "Unauthorized"
     ctx.res.statusCode = 401

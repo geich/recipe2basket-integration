@@ -1,8 +1,10 @@
-export const mapCategories = (categories: any, level: number) => {
-    console.log(categories)
-    for(let i = 1; i <= level; i++) {
-        console.log("loop", i)
-        categories = categories.map((c: any) => c.children.map((ch: object) => ch)).filter((c: any) => c)
+export const mapCategories = (categories: object[], level: number) => {
+    for(let i = 1; i < level; i++) {
+        categories = categories.reduce((acc: object[], elem: any) => {
+            acc = acc || []
+            elem.children.map((e: object) => acc.push(e))
+            return acc
+        }, [])
     }
     return categories
 }
