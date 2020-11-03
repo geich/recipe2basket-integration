@@ -1,5 +1,11 @@
 ## [0.1.0] - 2020-11-03
 
+### Changed
+
+- Added `/_v` in routes.
+
+## [0.1.0] - 2020-11-03
+
 ### Added
 
 - Categories list route.
