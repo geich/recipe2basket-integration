@@ -148,7 +148,7 @@ export class Catalog extends AppClient {
     this.get<Brand[]>(`/pub/brand/${id}`, { metric: 'catalog-brands' })
 
   public categories = (treeLevel: number) =>
-    this.get<Category[]>(`/pub/category/tree/${treeLevel}/`, {
+    this.get<Category[]>(`/pub/category/tree/${treeLevel}`, {
       metric: 'catalog-categories',
     })
 
@@ -205,7 +205,8 @@ export class Catalog extends AppClient {
       ...(!!salesChannel && { sc: salesChannel }),
     }
 
-    config.inflightKey = inflightKey
+    config.inflightKey = inflightKey 
+    console.log(`${this.basePath}${url}`)
     return this.http.getRaw<T>(`${this.basePath}${url}`, config)
   }
 
