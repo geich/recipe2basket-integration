@@ -1,9 +1,10 @@
-const createParentsId = (i: any, elem: any) => {
+const createParentsId = (i: number, elem: { parentsIds: object, id: string }) => {
     const levelName = `l${i}`
     elem.parentsIds = elem.parentsIds || {}
-    elem.parentsIds[levelName] = elem.id
+    const parentsIds: { [key: string]: string; } = { ...elem.parentsIds};
+    parentsIds[levelName] = elem.id
 
-    return elem.parentsIds
+    return parentsIds
 }
 
 

@@ -1,6 +1,12 @@
 
 ## [0.1.3] - 2020-11-04
 
+### Changed
+
+- Fix `/handlers/utils` for map correctly parents categories.
+
+## [0.1.3] - 2020-11-04
+
 ### Added
 
 - Terms of use `en-US.md` and `es-AR.md`.
