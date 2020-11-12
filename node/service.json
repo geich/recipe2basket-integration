@@ -1,7 +1,7 @@
 {
   "stack": "nodejs",
   "memory": 1536,
-  "ttl": 30,
+  "ttl": 20,
   "timeout": 12,
   "minReplicas": 2,
   "maxReplicas": 100,
@@ -12,6 +12,10 @@
     },
     "categories": {
       "path": "/_v/recipe2basket-integration/categories",
+      "public": true
+    },
+    "simulation": {
+      "path": "/_v/recipe2basket-integration/simulation",
       "public": true
     }
   }

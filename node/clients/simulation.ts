@@ -6,7 +6,7 @@ import {
 } from '@vtex/api'
 import { checkoutCookieFormat, statusToError } from '../utils'
 
-export class Checkout extends JanusClient {
+export class Simulation extends JanusClient {
   public constructor(ctx: IOContext, options?: InstanceOptions) {
     super(ctx, {
       ...options,
@@ -34,16 +34,9 @@ export class Checkout extends JanusClient {
     }
   }
 
-  private getChannelQueryString = () => {
-    const { segment } = this.context as CustomIOContext
-    const channel = segment && segment.channel
-    const queryString = channel ? `?sc=${channel}` : ''
-    return queryString
-  }
-
   public simulation = (simulation: SimulationPayload) =>
     this.post<SimulationOrderForm>(
-      this.routes.simulation(this.getChannelQueryString()),
+      this.routes.simulation(simulation.sc),
       simulation,
       {
         metric: 'checkout-simulation',
@@ -63,8 +56,8 @@ export class Checkout extends JanusClient {
   private get routes() {
     const base = '/api/checkout/pub'
     return {
-      simulation: (queryString: string) =>
-        `${base}/orderForms/simulation${queryString}`
+      simulation: (sc: string) =>
+        `${base}/orderForms/simulation?sc=${sc}`
     }
   }
 }

@@ -225,6 +225,7 @@ interface SimulationPayload {
   marketingData?: Record<string, string>
   geoCoordinates?: [string | number, string | number]
   shippingData?: any
+  sc: string
 }
 
 interface SLAItem {

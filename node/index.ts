@@ -14,6 +14,7 @@ const messagesCache = new LRUCache<string, any>({max: 3000})
 
 import { products } from './handlers/products'
 import { categories } from './handlers/categories'
+import { simulation } from './handlers/simulation'
 
 metrics.trackCache('segment', segmentCache)
 metrics.trackCache('catalog', catalogCache)
@@ -37,6 +38,9 @@ export default new Service({
     }),
     categories: method({
       POST: [categories],
+    }),
+    simulation: method({
+      POST: [simulation],
     })
   },
 })
