@@ -3,7 +3,7 @@
 
 ### Added
 
-- Added `node/handlers/simulation.ts`.
+- Added `node/handlers/simulation.ts` for simulate product stock.
 
 - Added `node/clients/simulation.ts`.
 
