@@ -1,4 +1,20 @@
 
+## [0.2.0] - 2020-11-12
+
+### Added
+
+- Added `node/handlers/simulation.ts`.
+
+- Added `node/clients/simulation.ts`.
+
+- Added `node/clients/checkout.ts`.
+
+### Changed
+
+- Changed `node/index.ts` added simulation `post` route.
+
+- Changed `node/service.json` added simulation `post` route.
+
 ## [0.1.3] - 2020-11-04
 
 ### Changed
